@@ -10,42 +10,39 @@ Built with ❤️ using **TensorFlow**, **MediaPipe**, **OpenCV**, and **pyttsx3
 ```
 SIGN_LANGUAGE_TO_SPEECH/
 ├── accuracy/
-│   ├── accuracy_loss.png            # Training accuracy/loss plot
-│   ├── test.txt                     # Test log or label list
-│   └── train.txt                    # Training log or label list
+│   ├── accuracy_loss.png           # Training performance graph
+│   ├── test.txt                    # List/log of test samples
+│   └── train.txt                   # List/log of training samples
 ├── data/
-│   └── gesture_landmarks_both_hands.csv  # Collected hand gesture landmarks
+│   └── gesture_landmarks_both_hands.csv  # Collected landmarks dataset
 ├── model/
-│   ├── gesture_dl_model.keras      # Trained DL model
-│   └── label_encoder.pkl           # Label encoder for gestures
+│   ├── gesture_dl_model.keras     # Trained gesture recognition model
+│   └── label_encoder.pkl          # Encoded gesture labels
 ├── total_signs/
-│   ├── display_signs.py            # Script to display supported signs
-│   └── toal_signs.txt              # Text file with sign labels
-├── app.py                          # Main sign-to-speech inference script
-├── collect_data.py                 # Data collection script for gestures
-├── train_dl_model.py               # Model training script
-├── LICENSE                         # License file
-└── README.md                       # Project documentation
+│   ├── display_signs.py           # Display supported gestures
+│   └── toal_signs.txt             # All gesture labels list
+├── app.py                         # Real-time sign-to-speech translator
+├── collect_data.py                # Gesture data collection script
+├── train_dl_model.py              # Model training script
+├── LICENSE                        # Project license
+└── README.md                      # Project documentation
 ```
 
 ---
 
-## 🛠️ How It Works
+## 🚀 Project Overview
 
-1. **Data Collection (`collect_data.py`)**  
-   Capture gesture landmark coordinates for both hands using MediaPipe and store them in a CSV file.
-
-2. **Model Training (`train_dl_model.py`)**  
-   Trains a deep learning classifier (Dense NN) on the gesture landmark data and saves the model and label encoder.
-
-3. **Real-time Inference (`app.py`)**  
-   Detects gestures live from the webcam, classifies them using the trained model, and speaks out the recognized gesture using `pyttsx3`.
+This system enables real-time **gesture-based communication** by recognizing sign language gestures and converting them into **spoken English** using speech synthesis.  
+It’s ideal for:
+- People with speech/hearing impairments
+- Human-computer interaction (HCI)
+- Educational demos and assistive tech
 
 ---
 
-## 📦 Requirements
+## 🔧 Setup & Requirements
 
-Install the required Python libraries:
+Install all required libraries:
 
 ```bash
 pip install tensorflow mediapipe opencv-python numpy pandas matplotlib pyttsx3 scikit-learn
@@ -53,50 +50,81 @@ pip install tensorflow mediapipe opencv-python numpy pandas matplotlib pyttsx3 s
 
 ---
 
-## 🚀 Quick Start
+## 🎯 How to Use
 
-### 🔹 1. Collect Gesture Data
+### 1️⃣ Collect Gesture Data
 
 ```bash
 python collect_data.py
 ```
-Follow the prompts to record samples for a gesture. Make sure both hands are visible.
+- Input the gesture label (e.g., "hello", "thank you").
+- Perform the gesture in front of the webcam.
+- The script captures 3D landmark data of both hands.
 
-### 🔹 2. Train the Model
+### 2️⃣ Train the Model
 
 ```bash
 python train_dl_model.py
 ```
-This trains the model and saves it under the `model/` directory.
+- Trains a Dense Neural Network on the collected gestures.
+- Saves model (`gesture_dl_model.keras`) and encoder (`label_encoder.pkl`).
+- Also visualizes training loss and accuracy.
 
-### 🔹 3. Run the Translator
+### 3️⃣ Run Real-time Translator
 
 ```bash
 python app.py
 ```
-The app waits for a gesture, records for 2 seconds, predicts the gesture, and converts it to speech.
+- Detects both hands using MediaPipe.
+- Captures movement for 2 seconds once hands are detected.
+- Predicts the most likely gesture.
+- Uses `pyttsx3` to speak out the recognized sign.
 
 ---
 
-## 📊 Visualization
+## 📊 Model Performance
 
-![Training Accuracy and Loss](accuracy/accuracy_loss.png)
+The graph below shows accuracy and loss trends during training:
 
----
-
-## 📂 Add/Update Supported Gestures
-
-1. Add more samples using `collect_data.py`.
-2. Retrain the model with `train_dl_model.py`.
-3. Keep `toal_signs.txt` updated with the list of gestures.
+![Accuracy & Loss Graph](accuracy/accuracy_loss.png)
 
 ---
 
-## 🗣️ Example Use Cases
+## 📝 Adding New Gestures
 
-- Accessibility aid for speech-impaired individuals  
-- Educational tool for learning sign language  
-- Real-time communication bridge using gesture recognition
+1. Collect new gesture samples using `collect_data.py`.
+2. Append the new data to `gesture_landmarks_both_hands.csv`.
+3. Retrain the model with `train_dl_model.py`.
+4. Update `toal_signs.txt` with new labels.
+
+---
+
+## 📦 Files to Note
+
+| File | Description |
+|------|-------------|
+| `app.py` | Real-time webcam-based gesture recognition & speech |
+| `collect_data.py` | Capture hand gesture data samples |
+| `train_dl_model.py` | Train and evaluate gesture classification model |
+| `model/` | Stores the saved DL model & label encoder |
+| `data/` | Stores collected gesture data (CSV format) |
+
+---
+
+## 💡 Future Improvements
+
+- Add support for continuous sentence-level translation  
+- Integrate sign-to-text + text-to-speech pipelines  
+- Build a user-friendly desktop or mobile interface  
+- Add more sign languages (BSL, ISL, etc.)
+
+---
+
+## 👨‍💻 Author
+
+**Divya Khunt**  
+B.Tech in Engineering | ML & Deep Learning Enthusiast  
+[GitHub Profile](#)
 
 ---
 
@@ -106,13 +134,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 🙋‍♀️ Author
+## 🌟 Show Some Love
 
-**Divya Khunt**  
-ML & DL Enthusiast | B.Tech in Engineering
-
----
-
-## 🌟 Show your support
-
-If you like this project, leave a ⭐ on [GitHub](#) and share it with others!
+If you found this project helpful:
+- ⭐ Star the repo
+- 🧠 Share it with friends
+- 🔁 Fork it and build on top of it!
