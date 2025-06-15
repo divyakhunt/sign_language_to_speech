@@ -1,0 +1,25 @@
+hello          : Raise one hand and wave side-to-side.
+goodbye        : Open palm, wave fingers from base like a “flick” wave.
+yes            : Make a fist and nod it up and down.
+no             : Pinch index and middle finger to thumb twice.
+thank you!     : Touch fingers to chin, move hand forward.
+more           : Tap fingertips of both hands together.
+sorry          : Make a fist and rub it in a circular motion over chest.
+please         : Open palm, rub chest in circular motion.
+i love you     : Raise hand, extend thumb, index, and pinky (ILY sign).
+eat            : Tap fingers to mouth like bringing food.
+drink          : Mimic holding and tipping a glass to your lips.
+all done!      : Twist both hands outward from chest.
+let's go!      : Point forward with index finger, then swing arm.
+hungry         : Run fingertips down from neck to stomach.
+thirsty        : Index finger from chin down throat.
+stop           : Show open palm, sharp forward motion.
+book           : Bring palms together, then open like a book.
+hurt           : Tap both index fingers together like poking.
+name           : Tap two fingers of each hand together (like forming an "H").
+help           : Place closed fist on open palm and lift both hands slightly.
+what           : Shake open hands side-to-side with puzzled face.
+where          : Wiggle index finger left-right with questioning look.
+how are you?   : Both hands in fists with thumbs up, held side by side at chest level, facing forward.
+peace          : Make V-sign with fingers (like 2 fingers up).
+fine!          : Touch thumb to chest, fingers open, and move hand outward.
