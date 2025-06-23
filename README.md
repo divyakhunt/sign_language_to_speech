@@ -1,4 +1,4 @@
-.# 🤟 Sign Language to Speech Translator 🗣️  
+..# 🤟 Sign Language to Speech Translator 🗣️  
 Translate sign language gestures (using both hands) into real-time speech using computer vision and deep learning.
 
 Built with ❤️ using **TensorFlow**, **MediaPipe**, **OpenCV**, and **pyttsx3**.
